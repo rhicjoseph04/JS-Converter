@@ -1,4 +1,17 @@
-import './css/style.css';
+import './scss/style.scss';
+
+var clients = document.getElementById('clients');
+var services = document.getElementById('services');
+
+clients.addEventListener('click', function() {
+  $(clients).toggleClass("active");
+  $(".parent:not(#clients)").toggleClass("invisible");
+}, false);
+
+services.addEventListener('click', function() {
+  $(services).toggleClass("active");
+  $(".parent:not(#services)").toggleClass("invisible");
+}, false);
 
 const kilogramsToGrams = document.getElementById('gTokg');
 
@@ -95,3 +108,4 @@ gallonsToLiters.addEventListener('click', () => {
        
     }
 });
+
