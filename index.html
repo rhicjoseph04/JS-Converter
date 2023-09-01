@@ -7,10 +7,57 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <link rel="icon" type="image/x-icon" href="./javascript.png">
     <title>Js Converter</title>
-  <script type="module" crossorigin src="./assets/index-e688a370.js"></script>
-  <link rel="stylesheet" href="./assets/index-b1a7ca20.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+     
+  
+  <script type="module" crossorigin src="./assets/index-5644cceb.js"></script>
+  <link rel="stylesheet" href="./assets/index-8c9623f4.css">
 </head>
 <body>
+
+
+ 
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">Your Logo</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+
+
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+</script>
 
         <div class="converter-div">
             <label for="grams">Grams</label>
@@ -18,6 +65,8 @@
             <label for="kilograms">Kilograms</label>
             <input type="text" name="kilograms" id="num2">
             <button class="gTokg" id="gTokg">Convert</button>
+            <button onclick="clearInput()">Clear</button>
+    
             
         </div>
         <br>
@@ -65,8 +114,49 @@
             <button class="gallonsToLiters" id="gallonsToLiters">Convert</button>
             
         </div>
+     
         <br>
+        
+       <!-- Start of Footer--> 
+
+        <footer class="footer-distributed">
+
+          <div class="footer-right">
+    
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+    
+          </div>
+    
+          <div class="footer-left">
+    
+            <p class="footer-links">
+              <a class="link-1" href="#">Home</a>
+    
+              <a href="#">Blog</a>
+    
+              <a href="#">Pricing</a>
+    
+              <a href="#">About</a>
+    
+              <a href="#">Faq</a>
+    
+              <a href="#">Contact</a>
+            </p>
+    
+            <p>Company Name &copy; 2015</p>
+          </div>
+    
+        </footer>
+
+ <!-- End of Footer--> 
+
 
     
+
+
+
 </body>
 </html>
