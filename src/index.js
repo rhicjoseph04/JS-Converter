@@ -1,21 +1,9 @@
-import './scss/style.scss';
-
-var clients = document.getElementById('clients');
-var services = document.getElementById('services');
-
-clients.addEventListener('click', function() {
-  $(clients).toggleClass("active");
-  $(".parent:not(#clients)").toggleClass("invisible");
-}, false);
-
-services.addEventListener('click', function() {
-  $(services).toggleClass("active");
-  $(".parent:not(#services)").toggleClass("invisible");
-}, false);
+import './css/style.css';
 
 const kilogramsToGrams = document.getElementById('gTokg');
 
 kilogramsToGrams.addEventListener('click', () => {
+  
     let num1 = document.getElementById('num1');
     let num2 = document.getElementById('num2');
     
@@ -27,7 +15,17 @@ kilogramsToGrams.addEventListener('click', () => {
        num1.value = (parseFloat(num2.value) * 1000).toFixed(2);
        
     }
+    
+
 });
+
+function clearInput() {
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("result").textcontent = "";
+}
+
+
 
 const celsiusToFahrenheit = document.getElementById('celsiusToFahrenheit');
 
@@ -109,3 +107,10 @@ gallonsToLiters.addEventListener('click', () => {
     }
 });
 
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
