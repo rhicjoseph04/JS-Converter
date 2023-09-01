@@ -31,10 +31,10 @@ celsiusToFahrenheit.addEventListener('click', () => {
     
     
  if (num4.value === '') {
-        num4.value = parseFloat(num3.value)* 9/5 + 32;
+        num4.value = parseFloat(num3.value * 9/5) + 32;
      
     } else if (num3.value === '') {
-       num3.value = (parseFloat(num4.value)/ 9/5  + 32).toFixed(2);
+       num3.value = (parseFloat(num4.value - 32) * 5/9).toFixed(2);
        
     }
 });
