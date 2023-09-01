@@ -1,5 +1,6 @@
 import './css/style.css';
 
+
 const kilogramsToGrams = document.getElementById('gTokg');
 
 kilogramsToGrams.addEventListener('click', () => {
@@ -19,11 +20,6 @@ kilogramsToGrams.addEventListener('click', () => {
 
 });
 
-function clearInput() {
-    document.getElementById("num1").value = "";
-    document.getElementById("num2").value = "";
-    document.getElementById("result").textcontent = "";
-}
 
 
 
