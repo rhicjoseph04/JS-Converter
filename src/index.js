@@ -1,4 +1,4 @@
-import './css/style.css';
+import './css/index.css';
 
 
 const kilogramsToGrams = document.getElementById('gTokg');
@@ -19,9 +19,6 @@ kilogramsToGrams.addEventListener('click', () => {
     
 
 });
-
-
-
 
 const celsiusToFahrenheit = document.getElementById('celsiusToFahrenheit');
 
@@ -67,38 +64,6 @@ poundsToKilograms.addEventListener('click', () => {
      
     } else if (num7.value === '') {
        num7.value = (parseFloat(num8.value) / 0.453592).toFixed(2);
-       
-    }
-});
-
-const inchesToCentimeters = document.getElementById('inchesToCentimeters');
-
-inchesToCentimeters.addEventListener('click', () => {
-    let num9 = document.getElementById('num9');
-    let num10 = document.getElementById('num10');
-    
-    
- if (num10.value === '') {
-        num10.value = parseFloat(num9.value) * 2.54;
-     
-    } else if (num9.value === '') {
-       num9.value = (parseFloat(num10.value) / 2.54).toFixed(2);
-       
-    }
-});
-
-const gallonsToLiters = document.getElementById('gallonsToLiters');
-
-gallonsToLiters.addEventListener('click', () => {
-    let num11 = document.getElementById('num11');
-    let num12 = document.getElementById('num12');
-    
-    
- if (num12.value === '') {
-        num12.value = parseFloat(num11.value) * 3.78541;
-     
-    } else if (num11.value === '') {
-       num11.value = (parseFloat(num12.value) / 3.78541).toFixed(2);
        
     }
 });
